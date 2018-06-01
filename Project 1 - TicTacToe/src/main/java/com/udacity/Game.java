@@ -150,7 +150,88 @@ public class Game {
      */
     public String checkGameWinner(char [][]grid){
         String result = "None";
-        //Student code goes here ...
+        char one = grid[0][0];
+        char two = grid[1][0];
+        char three = grid[2][0];
+        char four = grid [0][1];
+        char five = grid [1][1];
+        char six = grid[2][1];
+        char seven = grid[0][2];
+        char eight = grid[1][2];
+        char nine = grid[2][2];
+        if(one == 'x'){
+            if(two == 'x' && three == 'x'){
+                result = "X wins";
+            }
+            if(four == 'x' && seven == 'x'){
+                result = "X wins";
+            }
+            if(five == 'x' && nine == 'x'){
+                result = "X wins";
+            }
+        }
+        if(one == 'o'){
+            if(two == 'o' && three == 'o'){
+                result = "O wins";
+            }
+            if(four == 'o' && seven == 'o'){
+                result = "O wins";
+            }
+            if(five == 'o' && nine == 'o'){
+                result = "O wins";
+            }
+        }
+        if(two ==  'x'){
+            if(five == 'x' && eight == 'x'){
+                result = "X wins";
+            }
+
+        }
+        if(two ==  'o'){
+            if(five == 'o' && eight == 'o'){
+                result = "O wins";
+            }
+
+        }
+        if(four == 'x'){
+            if(five == 'x' && six == 'x'){
+                result = "X wins";
+            }
+        }
+        if(four == 'o'){
+            if(five == 'o' && six == 'o'){
+                result = "O wins";
+            }
+        }
+        if(seven == 'x'){
+            if(eight == 'x' && nine == 'x'){
+                result = "X wins";
+            }
+        }
+        if(seven == 'o'){
+            if(eight == 'o' && nine == 'o'){
+                result = "O wins";
+            }
+        }
+        if(three == 'x'){
+            if(six == 'x' && nine == 'x'){
+                result = "X wins";
+            }
+            if(five == 'x' && seven == 'x'){
+                result = "X wins";
+            }
+        }
+        if(three == 'o'){
+            if(six == 'o' && nine == 'o'){
+                result = "O wins";
+            }
+            if(five == 'o' && seven == 'o'){
+                result = "O wins";
+            }
+        }
+        if(one != '-' && two != '-' && three != '-' && four != '-' && five != '-' && six != '-' && seven != '-' && eight != '-' && nine != '-'){
+            result = "Tie";
+        }
         return result;
     }
 
